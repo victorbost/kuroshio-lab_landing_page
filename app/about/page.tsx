@@ -19,13 +19,15 @@ export default function About() {
               <Link href="/" className="text-sm text-[#D7DFE2] hover:text-[#21C6E3] transition-colors">
                 Home
               </Link>
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-[#21C6E3] text-[#21C6E3] hover:bg-[#21C6E3] hover:text-white bg-transparent"
-              >
-                Documentation
-              </Button>
+              <Link href="https://github.com/victorbost/kuroshio-lab_landing_page">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-[#21C6E3] text-[#21C6E3] hover:bg-[#21C6E3] hover:text-white bg-transparent"
+                  >
+                  Documentation
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -88,7 +90,7 @@ export default function About() {
                 Back to Homepage
               </Button>
             </Link>
-            <Link href="/docs">
+            <Link href="https://github.com/victorbost/kuroshio-lab_landing_page">
               <Button
                 size="lg"
                 variant="outline"
@@ -116,7 +118,7 @@ export default function About() {
               <Link href="/" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
                 Home
               </Link>
-              <Link href="/docs" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
+              <Link href="https://github.com/victorbost/kuroshio-lab_landing_page" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
                 Documentation
               </Link>
               <Link href="/contact" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
