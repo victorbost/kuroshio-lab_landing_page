@@ -65,6 +65,7 @@ All applications rely on a centralized AWS foundation:
 - S3 — shared bucket with prefix-level isolation
 
 #### S3 Structure
+```txt
 s3://kuroshio-lab-assets/
 ├── species/
 │ └── observations/
@@ -76,7 +77,7 @@ s3://kuroshio-lab-assets/
 │ └── images/
 └── monitoring/
 └── ingestion/
-
+```
 
 Each application:
 
@@ -183,6 +184,7 @@ Infrastructure-level ingestion and monitoring system.
 - Public access supported where appropriate
 
 ### 📦 Repository Structure
+```txt
 kuroshio-lab/
 ├── species/
 ├── dashboard/
@@ -196,7 +198,7 @@ kuroshio-lab/
 │ └── route53/
 ├── docs/
 └── README.md
-
+```
 
 Each application can also be split into its own repository if needed.
 
