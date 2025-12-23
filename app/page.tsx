@@ -8,45 +8,45 @@ export default function Home() {
   const projects = [
     {
       id: 1,
-      title: "Data Collector",
+      title: "Marine Species Observation Tracker",
       description:
-        "Real-time marine data ingestion from NOAA, GBIF, and Copernicus APIs. Automated data validation and quality control.",
+        "Build core CRUD functionality for logging species sightings on an interactive map, including photo storage (S3) and initial API integration (GBIF/OBIS).",
       icon: Database,
       status: "coming-soon" as const,
       color: "eco",
     },
     {
       id: 2,
-      title: "Visual Analytics",
+      title: "Ocean Data Dashboard",
       description:
-        "Interactive 3D ocean visualization with temporal analysis. Multi-layer data mapping and custom dashboards.",
+        "Focus on data pipeline design and visualization. The system uses Celery/AWS Lambda for periodic, asynchronous ingestion of real-time ocean data (e.g., NOAA, Copernicus) into PostgreSQL. The Next.js frontend displays this information via dynamic, interactive charts (Recharts/Plotly). Deployment is Dockerized and managed via a CI/CD pipeline to AWS ECS/Elastic Beanstalk.",
       icon: BarChart3,
       status: "coming-soon" as const,
       color: "primary",
     },
     {
       id: 3,
-      title: "Species Tracker",
+      title: "Coral Reef Health Index",
       description:
-        "Biodiversity monitoring with GBIF integration. Species distribution modeling and migration pattern analysis.",
+        "Develop an application that integrates a small Python ML model (regression/classification) to predict coral bleaching risk. The process involves building an ETL pipeline to fetch and store satellite sea surface temperature data, deploying the model within the Django API, and visualizing the prediction scores via a dedicated Next.js dashboard.",
       icon: Waves,
       status: "coming-soon" as const,
       color: "coral",
     },
     {
       id: 4,
-      title: "GeoMapper",
+      title: "Marine Life Encyclopedia with Recommendation Engine",
       description:
-        "Advanced bathymetric mapping and spatial analysis. Habitat classification and marine protected area visualization.",
+        "Create a rich, educational CRUD application focused on marine species. Key features include API integration for external data enrichment (WoRMS) and advanced search capabilities, including fuzzy search. An optional goal is to prototype a recommendation engine based on taxonomic similarity. The final application will be hosted on AWS ECS via Docker.",
       icon: MapPin,
       status: "coming-soon" as const,
       color: "primary",
     },
     {
       id: 5,
-      title: "Report Generator",
+      title: "Marine Monitoring Platform",
       description:
-        "Automated scientific reporting with publication-ready visualizations. Customizable templates for research teams.",
+        "The flagship project: a unified monitoring interface aggregating high-volume data from multiple sources (NOAA, MarineTraffic, Global Fishing Watch). The backend utilizes a scalable Django GraphQL API supported by a resilient ingestion pipeline (Celery/Lambda). The platform is a production-level deployment on AWS ECS with comprehensive CloudWatch monitoring and complex map-layer visualization.",
       icon: FileText,
       status: "coming-soon" as const,
       color: "eco",
@@ -69,13 +69,15 @@ export default function Home() {
               <Link href="/about" className="text-sm text-[#D7DFE2] hover:text-[#21C6E3] transition-colors">
                 About
               </Link>
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-[#21C6E3] text-[#21C6E3] hover:bg-[#21C6E3] hover:text-white bg-transparent"
-              >
-                Documentation
-              </Button>
+              <Link href="https://github.com/victorbost/kuroshio-lab_landing_page">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-[#21C6E3] text-[#21C6E3] hover:bg-[#21C6E3] hover:text-white bg-transparent"
+                  >
+                  Documentation
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -97,8 +99,7 @@ export default function Home() {
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-pretty text-lg leading-relaxed text-[#D7DFE2]">
               A comprehensive suite of cloud-native web applications for marine data collection, visualization, and
-              analysis. Powered by Next.js, Django, and AWS infrastructure with seamless integration of NOAA, GBIF, and
-              Copernicus APIs.
+              analysis. Powered by Next.js, Django, and AWS infrastructure with seamless integration of multiple APIs.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Button size="lg" className="bg-[#0077BA] hover:bg-[#005A8D] text-white">
@@ -220,10 +221,10 @@ export default function Home() {
               <Link href="/about" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
                 About
               </Link>
-              <Link href="/docs" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
+              <Link href="https://github.com/victorbost/kuroshio-lab_landing_page" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
                 Documentation
               </Link>
-              <Link href="/contact" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
+              <Link href="mailto:admin@kuroshio-lab.com" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
                 Contact
               </Link>
             </div>
