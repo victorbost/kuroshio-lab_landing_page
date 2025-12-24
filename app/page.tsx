@@ -69,7 +69,7 @@ export default function Home() {
               <Link href="/about" className="text-sm text-[#D7DFE2] hover:text-[#21C6E3] transition-colors">
                 About
               </Link>
-              <Link href="https://github.com/victorbost/kuroshio-lab_landing_page">
+              <Link href="https://github.com/kuroshio-lab">
                 <Button
                   variant="outline"
                   size="sm"
@@ -105,13 +105,15 @@ export default function Home() {
               <Button size="lg" className="bg-[#0077BA] hover:bg-[#005A8D] text-white">
                 Explore Tools
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-[#D7DFE2] text-[#D7DFE2] hover:bg-white/5 bg-transparent"
-              >
-                Read Manifesto
-              </Button>
+              <Link href="/about">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[#D7DFE2] text-[#D7DFE2] hover:bg-white/5 bg-transparent"
+                  >
+                  Read Manifesto
+                </Button>
+                </Link>
             </div>
           </div>
 
@@ -221,7 +223,7 @@ export default function Home() {
               <Link href="/about" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
                 About
               </Link>
-              <Link href="https://github.com/victorbost/kuroshio-lab_landing_page" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
+              <Link href="https://github.com/kuroshio-lab" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
                 Documentation
               </Link>
               <Link href="mailto:admin@kuroshio-lab.com" className="text-sm text-[#A7B2B7] hover:text-[#21C6E3] transition-colors">
