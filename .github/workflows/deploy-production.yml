@@ -20,7 +20,9 @@ jobs:
         id: commit
         run: |
           echo "sha_short=$(git rev-parse --short ${{ github.sha }})" >> $GITHUB_OUTPUT
-          echo "message=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+          echo "message<<EOF" >> $GITHUB_OUTPUT
+          git log -1 --pretty=%B >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Notify deployment start
         run: |
