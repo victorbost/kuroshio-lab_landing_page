@@ -14,7 +14,9 @@ export default function Home() {
         "Build core CRUD functionality for logging species sightings on an interactive map, including photo storage (S3) and initial API integration (GBIF/OBIS).",
       icon: Database,
       status: "coming-soon" as const,
-      color: "eco",
+      color: "eco" as const,
+      url: "https://tracker.kuroshio-lab.com",
+
     },
     {
       id: 2,
@@ -23,7 +25,8 @@ export default function Home() {
         "Focus on data pipeline design and visualization. The system uses Celery/AWS Lambda for periodic, asynchronous ingestion of real-time ocean data (e.g., NOAA, Copernicus) into PostgreSQL. The Next.js frontend displays this information via dynamic, interactive charts (Recharts/Plotly). Deployment is Dockerized and managed via a CI/CD pipeline to AWS ECS/Elastic Beanstalk.",
       icon: BarChart3,
       status: "coming-soon" as const,
-      color: "primary",
+      color: "primary" as const,
+      url: "https://dashboard.kuroshio-lab.com",
     },
     {
       id: 3,
@@ -32,7 +35,8 @@ export default function Home() {
         "Develop an application that integrates a small Python ML model (regression/classification) to predict coral bleaching risk. The process involves building an ETL pipeline to fetch and store satellite sea surface temperature data, deploying the model within the Django API, and visualizing the prediction scores via a dedicated Next.js dashboard.",
       icon: Waves,
       status: "coming-soon" as const,
-      color: "coral",
+      color: "coral" as const,
+      url: "https://coral.kuroshio-lab.com",
     },
     {
       id: 4,
@@ -41,7 +45,8 @@ export default function Home() {
         "Create a rich, educational CRUD application focused on marine species. Key features include API integration for external data enrichment (WoRMS) and advanced search capabilities, including fuzzy search. An optional goal is to prototype a recommendation engine based on taxonomic similarity. The final application will be hosted on AWS ECS via Docker.",
       icon: MapPin,
       status: "coming-soon" as const,
-      color: "primary",
+      color: "primary" as const,
+      url: "https://encyclopedia.kuroshio-lab.com",
     },
     {
       id: 5,
@@ -50,7 +55,8 @@ export default function Home() {
         "The flagship project: a unified monitoring interface aggregating high-volume data from multiple sources (NOAA, MarineTraffic, Global Fishing Watch). The backend utilizes a scalable Django GraphQL API supported by a resilient ingestion pipeline (Celery/Lambda). The platform is a production-level deployment on AWS ECS with comprehensive CloudWatch monitoring and complex map-layer visualization.",
       icon: FileText,
       status: "coming-soon" as const,
-      color: "eco",
+      color: "eco" as const,
+      url: "https://monitor.kuroshio-lab.com",
     },
   ]
 
@@ -104,9 +110,11 @@ export default function Home() {
               analysis. Powered by Next.js, Django, and AWS infrastructure with seamless integration of multiple APIs.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button size="lg" className="bg-[#0077BA] hover:bg-[#005A8D] text-white">
-                Explore Tools
-              </Button>
+              <a href="#tools-grid" className="flex"> {/* Changed href to #tools-grid */}
+                  <Button size="lg" className="bg-[#0077BA] hover:bg-[#005A8D] text-white">
+                    Explore Tools
+                  </Button>
+                </a>
               <Link href="/about">
                 <Button
                   size="lg"
@@ -142,7 +150,7 @@ export default function Home() {
       </section>
 
       {/* Tools Grid */}
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section  id="tools-grid" className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">{"Five Specialized Tools"}</h2>

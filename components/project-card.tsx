@@ -2,6 +2,7 @@ import type { LucideIcon } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
+import Link from "next/link";
 
 interface ProjectCardProps {
   id: number
@@ -10,9 +11,10 @@ interface ProjectCardProps {
   icon: LucideIcon
   status: "live" | "coming-soon"
   color: "primary" | "eco" | "coral"
+  url?: string
 }
 
-export function ProjectCard({ title, description, icon: Icon, status, color }: ProjectCardProps) {
+export function ProjectCard({ title, description, icon: Icon, status, color, url }: ProjectCardProps) { // Destructure url
   const colorClasses = {
     primary: "from-[#0077BA] to-[#003A63]",
     eco: "from-[#30C39E] to-[#0077BA]",
@@ -21,7 +23,7 @@ export function ProjectCard({ title, description, icon: Icon, status, color }: P
 
   const isLive = status === "live"
 
-  return (
+  const cardContent = (
     <Card
       className={cn(
         "group relative overflow-hidden border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300",
@@ -80,5 +82,13 @@ export function ProjectCard({ title, description, icon: Icon, status, color }: P
         )}
       />
     </Card>
-  )
+  );
+
+  return isLive && url ? (
+    <Link href={url} target="_blank" rel="noopener noreferrer">
+      {cardContent}
+    </Link>
+  ) : (
+    cardContent
+  );
 }
